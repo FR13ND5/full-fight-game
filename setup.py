@@ -91,7 +91,9 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-    ]
+    ],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
 )
 
 # (*) Please direct queries to the discussion group, rather than to me directly
