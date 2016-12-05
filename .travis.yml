@@ -15,7 +15,7 @@ install:
     - pip freeze
 
 script:
-    - coverall run --filename=setup.py test
+    - coveralls run --filename=setup.py test
     - pylint ffgame
 
 after_success: coveralls
