@@ -1,7 +1,7 @@
 """
 Abstraction of item
 """
-class Item:
+class Item(object):
     """
     Base class of itens
     """

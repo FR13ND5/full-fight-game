@@ -12,5 +12,5 @@ class Weapon(Item):
         """
         Set initial values and call super init
         """
-        super(Weapon, self).__init__()
+        super().__init__()
         self.name = name

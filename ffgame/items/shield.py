@@ -12,5 +12,5 @@ class Shield(Item):
         """
         Set initial values and call super init
         """
-        super(Shield, self).__init__()
+        super().__init__()
         self.name = name
