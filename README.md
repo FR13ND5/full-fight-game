@@ -4,3 +4,5 @@
 
 
 [![Build Status](https://travis-ci.org/FR13ND5/full-fight-game.svg?branch=master)](https://travis-ci.org/FR13ND5/full-fight-game)
+
+[![Coverage Status](https://coveralls.io/repos/github/FR13ND5/full-fight-game/badge.svg?branch=master)](https://coveralls.io/github/FR13ND5/full-fight-game?branch=master)
