@@ -1,4 +1,4 @@
-from item import Item
+from ffgame.items.item import Item
 
 class Shield(Item):
 
@@ -12,4 +12,4 @@ class Shield(Item):
 
     def unnequip(self):
         self.equipped = False
-        
+

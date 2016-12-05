@@ -1,4 +1,4 @@
-from inventory import Inventory
+from ffgame.character.inventory import Inventory
 
 class Character(object):
 
@@ -21,7 +21,7 @@ class Character(object):
 
     def defends(self):
        if self.is_dead():
-            return '{name} is dead'.format(name=self.name) 
+            return '{name} is dead'.format(name=self.name)
 
     def speaks(self):
         pass
@@ -33,4 +33,4 @@ class Character(object):
 
     def is_dead(self):
         return self.hp > 0
-          
+

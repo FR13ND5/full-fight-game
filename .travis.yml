@@ -10,11 +10,13 @@ env:
 sudo: false
 
 install:
-- pip install -r requirements.txt
-- pip install coveralls
-- pip freeze
+    - pip install -r requirements.txt
+    - pip install coveralls pylint
+    - pip freeze
 
-script: python setup.py test
+script:
+    - coverall run --filename=setup.py test
+    - pylint ffgame
 
 after_success: coveralls
 

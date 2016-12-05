@@ -1,4 +1,4 @@
-from item import Item
+from ffgame.items.item import Item
 
 class Weapon(Item):
 
@@ -12,4 +12,4 @@ class Weapon(Item):
 
     def unnequip(self):
         self.equipped = False
-        
+
