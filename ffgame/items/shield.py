@@ -1,15 +1,16 @@
+"""
+Abstraction of item
+"""
 from ffgame.items.item import Item
 
 class Shield(Item):
+    """
+    Shield class
+    """
 
-    def __init__(self):
-        super(Item, self).__init__()
+    def __init__(self, name):
+        """
+        Set initial values and call super init
+        """
+        super(Shield, self).__init__()
         self.name = name
-        self.equipped = False
-
-    def equip(self):
-        self.equipped = True
-
-    def unnequip(self):
-        self.equipped = False
-
