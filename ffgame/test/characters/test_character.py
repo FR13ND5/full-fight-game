@@ -7,15 +7,11 @@ character = ffgame.characters.character.Character("test")
 def test_init():
     assert character.get_name() == "test"
     assert character.health_point == 100
-    assert character.f_def == 1 # defense points
-    assert character.m_def == 1
-    assert character.p_attack == 1 # attack points
-    assert character.m_attack == 1
     assert isinstance(character.get_inventory(), Inventory)
 
 def test_returns():
-    assert character.attacks() == 2
-    assert character.defends() == 2
+    assert character.attacks() == 0
+    assert character.defends() == 1
     character.hit(10)
     assert character.health_point == 90
 

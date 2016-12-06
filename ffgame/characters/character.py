@@ -9,19 +9,12 @@ class Character(object):
     Character class
     """
 
-    #pylint: disable=too-many-instance-attributes
-    #TODO: verify number of attributes
-
     def __init__(self, name):
         """
         Set initial values of attributes
         """
         self.name = name
         self.health_point = 100 # healing points
-        self.f_def = 1 # defense points
-        self.m_def = 1
-        self.p_attack = 1 # attack points
-        self.m_attack = 1
         self.weapon = Weapon("", 0)
         self.inventory = Inventory()
 
@@ -49,7 +42,7 @@ class Character(object):
         """
         if self.is_dead():
             raise Exception('{name} is dead'.format(name=self.name))
-        return self.p_attack + self.m_attack + self.weapon.attack
+        return self.weapon.attack
 
     def defends(self):
         """
@@ -57,7 +50,7 @@ class Character(object):
         """
         if self.is_dead():
             raise Exception('{name} is dead'.format(name=self.name))
-        return self.f_def + self.m_def
+        return 1
 
     def hit(self, damage):
         """

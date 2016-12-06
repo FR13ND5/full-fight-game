@@ -1,7 +1,16 @@
-from character import Character
+"""
+Abstraction of Warrior
+"""
+from ffgame.characters.character import Character
 
 class Warrior(Character):
-    
+    """
+    Warrior class
+    """
+
     def __init__(self, name):
-        super(Character, self).__init__()
+        """
+        Set initial values of attributes
+        """
+        Character.__init__(self)
         self.name = name

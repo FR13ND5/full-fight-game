@@ -1,7 +1,16 @@
-from character import Character
+"""
+Abstraction of Sorcerer
+"""
+from ffgame.characters.character import Character
 
 class Sorcerer(Character):
-    
+    """
+    Sorcerer class
+    """
+
     def __init__(self, name):
-        super(Character, self).__init__()
+        """
+        Set initial values of attributes
+        """
+        Character.__init__(self)
         self.name = name
