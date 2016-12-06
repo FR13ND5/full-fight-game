@@ -1,4 +1,4 @@
-class Item(Object):
+class Item:
 
     def __init__(self):
         self.name = None
