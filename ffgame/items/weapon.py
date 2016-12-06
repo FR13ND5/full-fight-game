@@ -3,6 +3,7 @@ Abstraction of weapon
 """
 from ffgame.items.item import Item
 
+
 class Weapon(Item):
     """
     Weapon class

@@ -3,6 +3,7 @@ Abstraction of Warrior
 """
 from ffgame.characters.character import Character
 
+
 class Warrior(Character):
     """
     Warrior class

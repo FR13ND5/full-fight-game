@@ -2,6 +2,7 @@
 Abstraction of Inventory
 """
 
+
 class Inventory(object):
     """
     Inventory class
