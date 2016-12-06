@@ -8,15 +8,15 @@ python:
 
 env:
 
-sudo: true
+sudo: false
 
 install:
     - pip install -r requirements.txt
-    - pip install coveralls pep8 pytest
+    - pip install coveralls pep8
     - pip freeze
 
 script:
-    - pytest
+    - coverage run --source=ffgame setup.py test
     - pep8
 
 after_success: coveralls
