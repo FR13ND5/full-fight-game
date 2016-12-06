@@ -8,11 +8,11 @@ python:
 
 env:
 
-sudo: false
+sudo: true
 
 install:
     - pip install -r requirements.txt
-    - pip install coveralls pep8
+    - pip install coveralls pep8 pytest
     - pip freeze
 
 script:
