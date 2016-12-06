@@ -19,10 +19,7 @@ def test_raise():
     character.health_point = 0
     with pytest.raises(Exception) as execinfo:
         character.attacks()
-    execinfo.match(r'.* is dead')
     with pytest.raises(Exception) as execinfo:
         character.defends()
-    execinfo.match(r'.* is dead')
     with pytest.raises(Exception) as execinfo:
         character.hit(10)
-    execinfo.match(r'.* is dead')
