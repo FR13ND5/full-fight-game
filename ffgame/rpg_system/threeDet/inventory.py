@@ -1,6 +1,3 @@
-"""
-Abstraction of Inventory
-"""
 
 class Inventory(object):
     """

@@ -1,10 +1,4 @@
-"""
-Abstraction of item
-"""
-class Item(object):
-    """
-    Base class of itens
-    """
+class Item(Object):
 
     def __init__(self):
         """
