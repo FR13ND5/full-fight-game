@@ -4,6 +4,7 @@ Abstraction of Character
 from ffgame.characters.inventory import Inventory
 from ffgame.items.weapon import Weapon
 
+
 class Character(object):
     """
     Character class
@@ -14,7 +15,7 @@ class Character(object):
         Set initial values of attributes
         """
         self.name = name
-        self.health_point = 100 # healing points
+        self.health_point = 100
         self.weapon = Weapon("", 0)
         self.inventory = Inventory()
 

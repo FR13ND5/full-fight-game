@@ -3,6 +3,7 @@ Abstraction of item
 """
 from ffgame.items.item import Item
 
+
 class Shield(Item):
     """
     Shield class

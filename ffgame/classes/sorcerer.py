@@ -3,6 +3,7 @@ Abstraction of Sorcerer
 """
 from ffgame.characters.character import Character
 
+
 class Sorcerer(Character):
     """
     Sorcerer class
