@@ -8,9 +8,10 @@ class Weapon(Item):
     Weapon class
     """
 
-    def __init__(self, name):
+    def __init__(self, name, attack):
         """
         Set initial values and call super init
         """
         Item.__init__(self)
         self.name = name
+        self.attack = attack
