@@ -1,5 +1,5 @@
 
-class Inventory(Object):
+class Inventory(object):
 
     def __init__(self):
         self.owner = None

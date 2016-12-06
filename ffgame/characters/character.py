@@ -1,36 +1,74 @@
-from ffgame.character.inventory import Inventory
+"""
+Abstraction of Character
+"""
+from ffgame.characters.inventory import Inventory
+from ffgame.items.weapon import Weapon
 
 class Character(object):
+    """
+    Character class
+    """
 
-    def __init__(self):
-        self.name = None
-        self.hp = None # healing points
-        self.mp = None # magic points
-        self.f_def = None # defense points
-        self.m_def = None
-        self.p_attack = None # attack points
-        self.m_attack = None
-        self.weapon = None
-        self.armor = None
+    #pylint: disable=too-many-instance-attributes
+    #TODO: verify number of attributes
+
+    def __init__(self, name):
+        """
+        Set initial values of attributes
+        """
+        self.name = name
+        self.health_point = 100 # healing points
+        self.f_def = 1 # defense points
+        self.m_def = 1
+        self.p_attack = 1 # attack points
+        self.m_attack = 1
+        self.weapon = Weapon("", 0)
         self.inventory = Inventory()
-        self.alive = True
+
+    def get_name(self):
+        """
+        Return character name
+        """
+        return self.name
+
+    def equip_weapon(self, weapon):
+        """
+        Equip a weapon
+        """
+        self.weapon = weapon
+
+    def get_inventory(self):
+        """
+        Return character inventory
+        """
+        return self.inventory
 
     def attacks(self):
+        """
+        Return attack point
+        """
         if self.is_dead():
-            return '{name} is dead'.format(name=self.name)
+            raise Exception('{name} is dead'.format(name=self.name))
+        return self.p_attack + self.m_attack + self.weapon.attack
 
     def defends(self):
-       if self.is_dead():
-            return '{name} is dead'.format(name=self.name)
-
-    def speaks(self):
-        pass
+        """
+        Return defends point
+        """
+        if self.is_dead():
+            raise Exception('{name} is dead'.format(name=self.name))
+        return self.f_def + self.m_def
 
     def hit(self, damage):
+        """
+        Decrement damage of health point
+        """
         if self.is_dead():
-            return '{name} is dead'.format(name=self.name)
-        self.hp -= damage
+            raise Exception('{name} is dead'.format(name=self.name))
+        self.health_point -= damage
 
     def is_dead(self):
-        return self.hp > 0
-
+        """
+        Verify the character is live or dead
+        """
+        return self.health_point <= 0
