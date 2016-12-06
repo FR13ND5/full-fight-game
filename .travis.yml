@@ -2,13 +2,8 @@ language: python
 
 python:
     - "2.7"
-    - "3.2"
-    - "3.3"
     - "3.4"
     - "3.5"
-    - "3.5-dev"
-    - "3.6-dev"
-    - "nightly"
     - pypy
 
 env:
@@ -21,7 +16,7 @@ install:
     - pip freeze
 
 script:
-    - coverage run --source=ffgame setup.py test
+    - pytest
     - pep8
 
 after_success: coveralls
