@@ -12,5 +12,4 @@ class Sorcerer(Character):
         """
         Set initial values of attributes
         """
-        Character.__init__(self)
-        self.name = name
+        Character.__init__(self, name)

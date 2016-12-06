@@ -14,6 +14,9 @@ def test_returns():
     assert character.defends() == 1
     character.hit(10)
     assert character.health_point == 90
+    weapon = Weapon("test", 1)
+    character.equip_weapon(weapon)
+    assert character.weapon == weapon
 
 def test_raise():
     character.health_point = 0
